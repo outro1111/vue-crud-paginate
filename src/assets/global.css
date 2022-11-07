@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
+@import url(https://fonts.bunny.net/css?family=noto-sans-kr:100,300,400,500,700,900|open-sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i);
+html, body, div, span, a, form, input, select, button, textarea, legend, fieldset, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, address, p, th, td, caption, pre {margin:0;padding:0;line-height:1.6;box-sizing:border-box;font-family: 'Open Sans', 'Noto Sans KR', sans-serif;;font-size:16px;font-weight:400;color:#fff;font-style:normal;}
+input, select, textarea {height:44px;padding:10px 12px;border-radius:4px;border-radius:5px;border:1px solid rgba( 255, 255, 255, 0.3);background:rgba( 255, 255, 255, 0.1)}
+input::placeholder {color:rgba(255, 255, 255, 0.6);font-weight:200}
+input:focus {background:rgba(255, 255, 255, 0.2)}
+select option {color:#333}
+textarea {height:auto}
+ol, ul, li {list-style:none;}
+a:link, a:visited {text-decoration:none}
+a:hover, a:active {text-decoration:none}
+
+html {position:relative;width:100%;height:100%;overflow-y:scroll}
+body:before {content:'';position:fixed;top:0;right:0;bottom:0;left:0;background:var(--gradient-color5);z-index:-1}
+#wrap {max-width:1200px;margin:0 auto;padding:0 20px}
+#content {position:relative;min-height:500px;;padding:50px 30px;overflow:hidden}
+#content:before {content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:rgba( 255, 255, 255, 0.1);transform: skewY(-8deg);z-index:-1}
+h2.title {font-size:44px;font-weight:900;color:#fff;text-align:center;margin:20px 0;line-height:1.2}
+.btn_center {text-align:center;margin:25px 0;}
+.btn_basic {display:inline-block;height:40px;min-width:120px;line-height:38px;margin:0 5px;padding:0 20px;border:1px solid #fff;background:none;cursor:pointer;transition:background-color .5s ease;}
+.btn_basic:hover {background:rgba( 255, 255, 255, 0.2);}
+
+:root {
+  --ease1: cubic-bezier(.246,.75,.187,1);
+  --ease2: cubic-bezier(.19,1,.22,1);
+  --ease3: cubic-bezier(1,.2,.2,1);
+  --gradient-color1: linear-gradient(315deg,#42d392 25%,#647eff);
+  --gradient-color2: radial-gradient(circle farthest-corner at 0 0,#dd5183 36%,#ba75e0 50%,#5cb6f8 71%,#cfebff);
+  --gradient-color3: radial-gradient(circle farthest-side at 0 0,#cfebff 8%,#5cb6f8 38%,#ba75e0 73%,#e46793);
+  --gradient-color4: radial-gradient(circle farthest-corner at 100% 0,#ffaccf 28%,#5cb6f8 51%,#ba75e0 87%,#dd5183 96%);
+  --gradient-color5: linear-gradient(150deg,#281483 15%,#8f6ed5 70%,#d782d9 94%);
+  --font-white: rgba( 255, 255, 255, 0.8);
+}
+
+.spinner {animation:rotate 2s linear infinite;z-index:2;position:absolute;top:50%;left:50%;margin:-14px 0 0 -14px;width:28px;height:28px;opacity:.6}
+.spinner .path {stroke:#fff;stroke-width:7px;stroke-linecap:round;animation:dash 1.5s ease-in-out infinite;}
+@keyframes rotate { 
+  100% {transform: rotate(360deg);}
+}
+@keyframes dash { 
+  0% {stroke-dasharray: 1, 150;stroke-dashoffset: 0;}
+  50% {stroke-dasharray: 90, 150;stroke-dashoffset: -35;}
+  100% {stroke-dasharray: 90, 150;stroke-dashoffset: -124;}
+}
+
+.pagination {display:flex;margin-top:25px;border-radius:4px;justify-content:center;}
+.page-link {position:relative;display:block;padding:8px 16px;margin-left:-1px;line-height:1.25;color:#fff;border: 1px solid rgba( 255, 255, 255, 0.3);cursor:pointer;transition:background-color .5s ease;}
+.page-link:hover {background:rgba( 255, 255, 255, 0.2);}
+.page-item:first-child .page-link {margin-left:0;border-top-left-radius:4px;border-bottom-left-radius:4px;}
+.page-item:last-child .page-link {border-top-right-radius:4px;border-bottom-right-radius:4px;}
+.page-item.active .page-link {z-index:3;color:#fff;background:rgba( 255, 255, 255, 0.2);}
+.page-item.disabled .page-link {color:rgba( 255, 255, 255, 0.5);cursor:default}
+.page-item.disabled .page-link:hover {background:none}
+.page-item .break-view {display:none}
