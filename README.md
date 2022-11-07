@@ -1,5 +1,5 @@
-# vue-crud
-vue crud 게시판
+# vue-crud-paginate
+vue crud 게시판 (리스트, 상세, 쓰기, 수정, 삭제)
 - vue ver3
 - axios
 - json-server
