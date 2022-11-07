@@ -1,5 +1,10 @@
 # vue-crud
 vue crud 게시판
+- vue ver3
+- axios
+- json-server
+- vue-router
+- vuejs-paginate-next
 
 ## Project setup
 ```
