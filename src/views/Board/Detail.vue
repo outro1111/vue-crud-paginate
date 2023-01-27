@@ -50,7 +50,7 @@ export default {
     },
     fnDelete() { // 해당 게시물 삭제
       if(confirm('삭제하시겠습니까?')) { // comfirm 창 먼저 실행 - 확인 시 밑 소스 실행
-        this.$axios.delete(this.baseURL + '/lists/' + this.id) // axios delete 로 해상(id) 게시물 삭제
+        this.$axios.delete(this.baseURL + '/lists/' + this.id) // axios delete 로 해(id) 게시물 삭제
         .then(() => {
            this.$router.push({ path: '/list' }) // 삭제 후 리스트 페이지로 이동
           })
